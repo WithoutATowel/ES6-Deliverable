@@ -2,7 +2,9 @@
 // and lastName. Set the default values to 'hello' and your first
 // and last name, if no input is provided.
 
-const greeting = function(){}  // fill this in!
+const greeting = function(greeting = 'Hello', first = 'Brett', last = 'Spencer'){
+  return greeting + " " + first + " " + last;
+} 
 
 console.log(greeting());
 

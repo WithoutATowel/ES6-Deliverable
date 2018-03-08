@@ -4,20 +4,27 @@
 // Shouter is a subtype of Speaker which shouts its text and makes it uppercase.
 
 
-function Speaker(name, verb) {
-  this.name = name
-  this.verb = verb || "says"
+class Speaker {
+  constructor(name, verb) {
+    this.name = name;
+    this.verb = verb || "says";
+  }
+  
+  speak(text) {
+    console.log(this.name + " " + this.verb + " '" + text + "'");
+  }
 }
-Speaker.prototype.speak = function(text) {
-  console.log(this.name + " " + this.verb + " '" + text + "'")
-}
+    
 
-function Shouter(name) {
-  Speaker.call(this, name, "shouts")
-}
-Shouter.prototype = Object.create(Speaker.prototype)
-Shouter.prototype.speak = function(text) {
-  Speaker.prototype.speak.call(this, text.toUpperCase())
+class Shouter {
+  constructor(name) {
+    this.name = name;
+    this.verb = 'shouts';
+  }
+
+  speak(text) {
+    console.log(this.name + " " + this.verb + " '" + text.toUpperCase() + "'");
+  }
 }
 
 new Shouter("Dr. Loudmouth").speak("hello there")

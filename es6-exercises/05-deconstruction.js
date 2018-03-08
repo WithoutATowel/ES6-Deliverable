@@ -6,10 +6,10 @@
 
 function detectCollision(objects, point) {
   for (let i = 0; i < objects.length; i++) {
-    let object = objects[i]
-    if (point.x >= object.x && point.x <= object.x + object.width &&
-        point.y >= object.y && point.y <= object.y + object.height)
-      return object
+    let {x, y, width, height } = objects[i]
+    if (point.x >= x && point.x <= x + width &&
+        point.y >= y && point.y <= y + height)
+      return objects[i]
   }
 }
 

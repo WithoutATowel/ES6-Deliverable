@@ -1,34 +1,17 @@
 // move triangle object to triangle.js
-const triangle = {
-  isIsosceles(a,b,c){
-    if(a===b || b===c || a===c) return true
-    return false
-  },
-  area(base, height){
-    return (base * height) / 2
-  }
-}
+// Done!
 
 // move square object to square.js
-const square = {
-  area(x){
-    return x * x
-  }
-}
+// Done!
 
 // move circle object to circle.js
-const circle = {
-  area(r){
-    return Math.PI * (r * r)
-  },
-  diameter(r){
-    return r + r
-  }
-}
+// Done!
 
 // Use `import` and `export` to make the code below work.
 // e.g. import {pizza} from "jammy"
-YOUR_CODE_HERE
+import circle, { diameter } from './circle';
+import square from './square';
+import triangle, { isIsosceles } from './triangle';
 
 // Do not edit below this line
 console.log(isIsosceles(3,7,7) === true)

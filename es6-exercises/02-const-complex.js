@@ -9,6 +9,8 @@ const account = {
   password: "xyzzy"
 }
 
+Object.freeze(account);
+
 account.password = "s3cret"
 
 console.log(account.password)

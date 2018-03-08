@@ -6,6 +6,19 @@
 // of the two original points, and whose y is the sum of their y properties.
 
 // Your code here
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    
+    plus(point) {
+      let newX = this.x + point.x;
+      let newY = this.y + point.y;
+      return new Point(newX, newY);
+    }
+}
+
 console.log(new Point(1, 2).plus(new Point(2, 1)))
 // → Point{x: 3, y: 3}
 

@@ -3,14 +3,19 @@
 // Use arrow functions.
 
 const inventory = [
-  {type:   "machine", value: 5000},
-  {type:   "machine", value:  650},
-  {type:      "duck", value:   10},
+  {type: "machine", value: 5000},
+  {type: "machine", value: 650},
+  {type: "duck", value: 10},
   {type: "furniture", value: 1200},
-  {type:   "machine", value:   77}
+  {type: "machine", value: 77}
 ]
 
-let totalMachineValue = YOUR CODE HERE
+let totalMachineValue = inventory.reduce(function(accumulator, item) {
+  if (item.type === 'machine') {
+    accumulator += item.value 
+  }
+  return accumulator
+}, 0);
 
 console.log(totalMachineValue)
 
