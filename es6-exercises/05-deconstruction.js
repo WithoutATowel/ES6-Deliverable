@@ -5,11 +5,10 @@
 // Hint: you might want to use a new array method called find, so look that up!
 
 function detectCollision(objects, point) {
-  for (let i = 0; i < objects.length; i++) {
-    let {x, y, width, height } = objects[i]
-    if (point.x >= x && point.x <= x + width &&
-        point.y >= y && point.y <= y + height)
-      return objects[i]
+  for (let object of objects) {
+    let {x, y, width, height } = object;
+    if (point.x >= x && point.x <= x + width && point.y >= y && point.y <= y + height)
+      return object;
   }
 }
 
